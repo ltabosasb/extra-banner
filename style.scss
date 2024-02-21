@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.card {
+    width: 264px;
+    height: 264px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+
+    &__image {
+        height: 110px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__content {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+        flex-grow: 1;
+    }
+
+    &__title,
+    &__subtitle {
+        margin: 0;
+    }
+
+    &__title {
+        font-size: 20px;
+    }
+
+    &__button {
+        font-size: 16px;
+        font-weight: 600;
+        color: #000;
+        border: 1px;
+        border-radius: 8px;
+        padding: 8px 16px;
+        cursor: pointer;
+    }
+
+    &__button--red {
+        background-color: #CC292B;
+    }
+
+    &__button--green {
+        background-color: #7AB800;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 162px;
+        height: 192px;
+
+        &__content {
+            padding: 8px;
+        }
+
+        &__image {
+            height: 77px;
+        }
+
+        &__title {
+            font-size: 12px;
+        }
+
+        &__subtitle {
+            font-size: 12px;
+        }
+
+        &__button {
+            font-size: 14px;
+            width: 100%;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+    }
+}
